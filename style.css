@@ -1,0 +1,174 @@
+/* General */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  width: 380px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #43e97b;
+  outline: none;
+  box-shadow: 0 0 8px rgba(67,233,123,0.5);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Sign Up / Log In Buttons */
+#signup-btn, #login-btn {
+  background: #43e97b;
+  color: #fff;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#signup-btn:hover, #login-btn:hover {
+  background: #32c76f;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #e74c3c;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* Task Section */
+.input-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+}
+
+#add-btn {
+  background: #43e97b;
+  color: #fff;
+  margin-left: 10px;
+}
+
+#add-btn:hover {
+  background: #32c76f;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+li {
+  background: #f3f3f3;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+li:hover {
+  background: #e1e1e1;
+}
+
+li button {
+  background: #e74c3c;
+  padding: 6px 12px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+li button:hover {
+  background: #c0392b;
+}
+
+/* Scrollbar for task list */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #43e97b;
+  border-radius: 3px;
+}
+
+/* Links */
+a {
+  color: #43e97b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 420px){
+  .container { width: 90%; padding: 30px 20px; }
+  .input-section { flex-direction: column; }
+  #add-btn { margin-left: 0; margin-top: 10px; width: 100%; }
+}
